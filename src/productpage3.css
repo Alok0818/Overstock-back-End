@@ -1,0 +1,97 @@
+#body{
+    width: 98%;
+    font-family:Helvetica, Helvetica, Arial, sans-serif;
+}
+#p1{
+
+padding-left: 2%;
+font-size: 23px;
+color:rgb(64, 67, 70);
+
+}
+#h11{
+font-size:40px;
+margin: 0%;
+
+padding-left: 2%;
+color:rgb(47, 51, 55);
+}
+#container{
+  display: grid;
+  width: 98%;
+ 
+  margin: auto;
+  grid-template-columns: repeat(4,1fr);
+ 
+  grid-gap:15px
+  
+}
+#container >div{
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+height: auto;
+background-color: rgb(255, 255, 255);
+}
+
+#container >div >a>img{
+height: 70%;
+width: 100%;
+}
+#container >div >a>p{
+font-size: 13px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color:rgb(47, 51, 55);
+margin: 3%;
+
+font-weight: 500;
+}
+a{
+text-decoration: none;
+
+}
+
+#container > div >a>h2{
+color: red;
+font-size: 23px;
+margin: 3%;
+}
+#container >div >a>div{
+display: flex;
+margin: 3%;
+gap: 5px;
+}
+#sort{
+display: flex;
+margin-right: 1%;
+gap: 10px;
+gap: 20px;
+float: right;
+}
+#select{
+width: 250px;
+padding-left: 20px;
+border: 0.5px solid rgb(192, 197, 202);
+font-size: 15px;
+color:rgb(64, 67, 70);
+height: 35px;
+margin-top: 2%;
+}
+#sort >p{
+
+font-size: 16px;
+
+color:rgb(77, 80, 83);
+}
+#cartbutton{
+width: 85px;
+float: right;
+color: white;
+background-color: green;
+border: 1px solid green;
+position: absolute;
+border-radius: 2px;
+height: 28px;
+cursor: pointer;
+top: 10px;
+margin-right: 1%;
+}

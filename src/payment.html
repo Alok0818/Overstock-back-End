@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+        width: 65%;
+        margin: auto;
+        font-size: 12px;
+        font-family: sans-serif;
+    }
+
+    #nav{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    #nav-p{
+        padding-top: 30px;
+    }
+
+    #main{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    #fed{
+        display: flex;
+        
+    }
+
+    #secure{
+        line-height: 4px;
+        padding-top: 4px;
+        padding-left: 10px;
+    }
+
+    #footer{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #r-footer{
+        display: flex;
+    }
+
+    #language{
+        
+    }
+
+    #mid{
+        
+    }
+
+    #bill{
+        
+        /* border: 0.5px solid rgb(163, 160, 160); */
+        width: 550px;
+        margin: auto;
+        font-size: 12px;
+        margin-bottom: 20px;
+        
+    }
+
+    #bill-form>div{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 50px;
+        margin-right: 50px;
+        
+    }
+
+    input{
+        height: 15px;
+        margin-top: 10px;
+        width: 250px;
+    }
+
+    #phone{
+        width: 220px;
+    }
+
+    #payment{
+        width:550px ;
+        margin: auto;
+        /* border: 0.5px solid rgb(155, 148, 148); */
+    }
+
+    #payment>div{
+        padding-left: 10px;
+        padding-top: 10px;
+        
+    }
+
+    #pay-head{
+        border: 0.5px solid rgb(155, 148, 148);
+        padding-bottom: 10px;
+        text-align: center;
+        font-weight: bold;
+        background-color: #f0ece0;
+    }
+
+    #pay-body{
+        width: 450px;
+        display: flex;
+        
+    }
+
+    #view{
+        margin-bottom: 60px;
+    }
+
+    #canada{
+        display: flex;
+        line-height: 4px;
+        background-color: #f2f2f0;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        
+    }
+
+    #canada>div{
+        display: flex;
+        font-weight: bold;
+        margin-right: 100px;
+
+    }
+
+    #australia{
+        display: flex;
+        line-height: 4px;
+        font-weight: bold;
+    }
+
+    button{
+        border: none;
+        font-size: 12px;
+        background-color: white;
+    }
+
+    #btn>label{
+        margin-right: 100px;
+    }
+
+    #card,#credit,#security,#expire{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    #card-type{
+        height: 20px;
+        margin-top: 10px;
+    }
+
+    #left{
+        width: 50%;
+        
+
+    }
+
+    #right{
+        width: 50%;
+        
+    }
+
+    #credit-input{
+        margin-top: 15px;
+        margin-bottom: 10px;
+        width: 200px;
+    }
+
+    #inner{
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    #secure-code{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 60px;
+    }
+
+    /* #expire{
+        display: flex;
+    } */
+
+    #back-cart{
+        margin-top: 30px;
+        margin-bottom: 20px;
+        text-decoration: underline;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    #billing-add{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        font-weight: bold;
+        background-color: #f0ece0;
+        border: 0.5px solid rgb(155, 148, 148);
+    }
+
+    #order{
+        width: 150px;
+        height: 30px;
+        margin: auto;
+        font-size: 18px;
+        /* border: 1px solid black; */
+        margin-left: 425px;
+        margin-top: 30px;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: rgb(78, 145, 78);
+        color: white;
+    }
+
+
+</style>
+<body>
+    <div id="container">
+        <div id="nav">
+            <div id="nav-img">
+                <img width="150px" height="50px"
+                src="https://logos-download.com/wp-content/uploads/2017/01/Overstock_logo.png" alt="image">
+            </div>
+            <div id="nav-p">You are using our secure server</div>
+        </div><hr>
+        <div id="main">
+            <div id="fed">
+                <img width="100px" height="40px"
+                src="https://ak1.ostkcdn.com/img/mxc/20170922_fedexLogo.png" alt="image">
+                <div id="secure">
+                    <p>Secure checkout provided by FedEx International.</p>
+                    <p>Your order total includes customs and taxes, if applicable.</p>
+                </div>
+            </div>
+            <div>
+                <select name="" id="language">
+                    <option value="">
+                        <img width="50px" height="50px"
+                        src="https://ztransaction.bongous.com/static/locate/flag/flag_en.gif" alt="image">
+                        <p>United Kingdom / English</p>
+                    </option>
+                    <option value=""> lenanon / English</option>
+                    <option value="">Russia / Russian</option>
+                    <option value=""> Deutschland / Deutsch</option>
+                    <option value="">France / Francais</option>
+                </select>
+            </div>
+        </div>
+        <!-- ------------------------------------------------------------------------------------ -->
+
+        <button  id="back-cart">Back to cart</button>
+        <div id="bill">
+            <div id="billing-add">Shipping Address</div>
+            <div id="bill-form">
+                <div>
+                    <p>Email *</p>
+                    <input type="email" placeholder="E-mail">
+                </div>
+                <div>
+                    <p>First Name *</p> 
+                    <input type="text" placeholder="First Name">
+                </div>
+                <div>
+                    <p>Last Name *</p> 
+                    <input type="text" placeholder="Last Name">
+                </div>
+                <div>
+                    <p>Company</p> 
+                    <input type="text" placeholder="Company">
+                </div>
+                <div>
+                    <p>Address Line 1 *</p> 
+                    <input type="text" placeholder="Address">
+                </div>
+                <div>
+                    <p>Country *</p> 
+                    <input type="text" placeholder="Country Name">
+                </div>
+                <div>
+                    <p>City *</p> 
+                    <input type="text" placeholder="City">
+                </div>
+                <div>
+                    <p>State</p> 
+                    <input type="text" placeholder="State">
+                </div>
+                <div>
+                    <p>ZIP Code</p> 
+                    <input type="text" placeholder="ZIP Code" maxlength="6" minlength="6" required>
+                </div>
+                <div>
+                    <p>Phone #</p> 
+                    <div>
+                        <button>+91</button>
+                        <input type="text" placeholder="Phone Number" name="" id="phone" maxlength="10" minlength="10" required>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+
+        <!-- =========================================================================== -->
+
+        <div id="payment">
+            <div id="pay-head">Payment Information</div>
+            <div>
+                <img src="https://ztransaction.bongous.com/static/css/images/pm/visa.png" alt="image">
+                <img src="https://ztransaction.bongous.com/static/css/images/pm/mastercard.png" alt="image">
+                <img src="https://ztransaction.bongous.com/static/css/images/pm/bitcoin.png" alt="image">
+            </div>
+            <div id="pay-body">
+                <div id="left">
+                    <div id="card">
+                        <p>Card Type *</p>
+                    </div>
+                    <div id="credit">
+                        <p>Credit Card Number *</p>
+                    </div>
+                    <div id="expire">
+                        <p>Expiration Date * </p>
+                    </div>
+                    <div id="security">
+                        <p>Security Code *</p>
+                    </div>
+                </div>
+                <div id="right">
+                    <select name="" id="card-type">
+                        <option value="select">Select...</option>
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">Mastercard</option>
+                        <option value="bitcoin">Bitcoin</option>
+                    </select>
+                    <input type="text" id="credit-input" placeholder="Card Number" maxlength="12" minlength="12" required><br>
+                    <div id="inner">
+                        <select name="" id="month" required>
+                            <option value="month">Month</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <select name="" id="Year" required>
+                            <option value="Year">Year</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
+                        </select><br>
+                            <input type="text" id="secure-code" placeholder="CVV" maxlength="3" minlength="3" required><br>
+                            <img src="data:image/gif;base64,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" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button id="order">Place Order</button>
+
+        <!-- --------------------------------------------------------------------------------- -->
+        <div id="customer">
+            <h3>Customer Testimonials:</h3><hr>
+            <div id="australia">
+                <img width="60px" height="40px"
+                src="data:image/png;base64,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" alt="image">
+                <div>
+                    <P>Catherine</P>
+                    <p>Australia</p>
+                </div>
+            </div>
+            <p>"I received my item today and I am just emailing to say how pleased I am with your service. I am thrilled with the coat I ordered, a coat I cannot buy in Australia. The price was fair and I received the item within 10 days!" Thank you for excellent service."</p>
+            <div id="canada">
+                <div>
+                    <img width="60px" height="40px"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVwjXNNZlDpw8hfHg2htIxey0SxQHpCVHPvw&usqp=CAU" alt="image">
+                    <div>
+                        <p>Christine</p>
+                        <p>mississauga, ON</p>
+                    </div>
+                </div>
+                <p>"I'm very impressed by the level of dedication Overstock.com has for its customers."</p>
+            </div>
+            <button id="view">View all customer Testimonials</button>
+            <div id="btn">
+                <label>Return Policy</label>
+                <label>Contact Customer care</label>
+                <label>FAQ</label>
+                <label>Privacy Policy</label>
+                <label>Site User Terms & Conditions*</label><hr>
+            </div>
+            <div id="footer">
+                <p>2022 Overstock.com All Rights Reserved</p>
+                <div id="r-footer">
+                    <p>We self certify complaince with:</p>
+                    <img width="150px" height="50px"
+                    src="https://ak1.ostkcdn.com/img/mxc/20200630-intl-privacy_shield.png" alt="image">
+                </div>
+            </>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    document.querySelector("#order").addEventListener("click", check);
+
+    function check(elem){
+        event.preventDefault();
+        
+        let card = document.getElementById("card-type").value;
+        let credit = document.getElementById("credit-input").value;
+        let month = document.getElementById("month").value;
+        let year = document.getElementById("Year").value;
+        let code = document.getElementById("secure-code").value;
+
+        if (card === "" || credit === "" || month === "" || year === "" || code ===""){
+            alert("Invalid credentials")            
+            
+        }
+
+        else{
+            myfun(event)
+
+        }
+
+    }
+
+    function myfun(event){
+        event.preventDefault();
+        var otp = prompt("Enter OTP");
+        if(otp === "1234"){
+            window.setTimeout(function() {
+                window.location.href = "./final-page.html";
+            }, 3000);
+        }
+        else{
+            alert("Please enter a valid OTP")
+        }
+    }
+
+    document.getElementById("back-cart").addEventListener("click",function(){
+        window.location.href="./cartshow.html"
+    })
+</script>

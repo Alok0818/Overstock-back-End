@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Landing.css">
+    <link rel="stylesheet" href="./productpage4.css">
+</head>
+
+<body id="body">
+    <div id="navbar"></div>
+    <br>
+    <div id="container">
+        <div id="left">
+            <img id="image1" src="https://ak1.ostkcdn.com/images/products/is/images/direct/daa7ace193958f1d9872d1eead82df66b58eb18a/Glitzhome-24%22H-Happy-Valentine%27s-Wooden-Doorknorb-Hanging-Decor.jpg" alt="">
+        </div>
+        <div id="right">
+            <h1 id="h11">Glitzhome 24"H Happy Valentine's Easter Wooden Doorknorb Hanging Decor</h1>
+            <div id="star">
+                <img src="https://ak1.ostkcdn.com/img/mxc/20200227_rating-star-full.svg" alt="">
+                <img src="https://ak1.ostkcdn.com/img/mxc/20200227_rating-star-full.svg" alt="">
+                <img src="https://ak1.ostkcdn.com/img/mxc/20200227_rating-star-full.svg" alt="">
+                <img src="https://ak1.ostkcdn.com/img/mxc/20200227_rating-star-full.svg" alt="">
+                <img src="https://ak1.ostkcdn.com/img/mxc/20200227_rating-star-empty.svg" alt="">
+            </div>
+            <h2 id="h21"></h2>
+            <h3 id="h31">Choose Color</h3>
+            <!-- //div2 -->
+            <div id="div2">
+                <div> <img id="image2" src="https://ak1.ostkcdn.com/images/products/is/images/direct/456eefc6f57dc82f2fc295518f0752f816876bfe/Morden-Fort-Couches-for-Living-Room%2C-Sofas-for-Living-Room-Furniture-Sets%2C-Sofa%2C-Fabric%2C-Velvet.jpg?imwidth=320&impolicy=medium" alt="">
+                <p>Beige</p>
+                </div>
+                <div>
+                    <img src="https://ak1.ostkcdn.com/images/products/13448484/Shindanlang-Chrome-finish-16-inch-Metal-Chandelier-0f33db30-f453-49e7-932f-4a3a4a419ccc_600.jpg?imwidth=320&impolicy=medium" alt="">
+                    <p>Black</p>
+                </div>
+                <div>
+                    <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/cdc46c687f2b78f73b73bd3d32d8a0a44f9f27bd/Antique-Style-Dining-Set-Distressed-Black.jpg?imwidth=320&impolicy=medium" alt="">
+                    <p>Green</p>
+                </div>
+            </div>
+            <!-- div3 -->
+            <div id="div3">
+              <button id="buybutton">Buy Now</button>
+              <button id="cartbutton">Add to Cart</button>
+            </div>
+            <p id="p1">Only 13 Left Hurry!</p>
+            <p id="p2"> ITEM#id415112</p>
+
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <div id="footer"></div>
+    
+</body>
+</html>
+<script type="module">
+    import { navigation, Footer } from "./Landing.js"
+
+let l=navigation()
+document.getElementById("navbar").innerHTML=l
+let f=Footer()
+document.getElementById("footer").innerHTML=f
+
+    let data=JSON.parse(localStorage.getItem("itemdata"))
+let cartdata=JSON.parse(localStorage.getItem("cartdata"))||[]
+    function showdata(data){
+        data=data[0]
+  
+
+            console.log(data)
+            document.getElementById("image1").src=data.image
+            document.getElementById("image2").src=data.image
+            document.getElementById("h11").innerText=data.name
+            document.getElementById("h21").innerHTML=`Sale INR- ${data.price}`
+            document.getElementById("p1").innerHTML=`Only ${13} Left Hurry!`
+            document.getElementById("p2").innerHTML=` ITEM#id${Math.floor(Math.random(100/10))}`
+
+
+            document.querySelector("#buybutton").addEventListener("click",function(){
+
+window.location.href="./payment.html"
+})
+
+            document.querySelector("#cartbutton").addEventListener("click",function(){
+
+addtocart(data)
+})
+        
+
+    }
+    showdata(data)
+
+
+    
+    function addtocart(item){
+    
+     
+    cartdata.push(item)
+    document.getElementById("cartbutton").style.backgroundColor="red"
+    document.getElementById("cartbutton").innerHTML="Added to Cart"
+    localStorage.setItem("cartdata",JSON.stringify(cartdata))
+       cartcount()
+    
+        }
+  
+        document.querySelector(".dropbtn").addEventListener("click", function(){
+    window.location.href="./furniture.html"
+  })
+  document.querySelector("#dropbtn2").addEventListener("click", function(){
+    window.location.href="./Rugs.html"
+  })
+  document.querySelector("#dropbtn3").addEventListener("click", function(){
+    window.location.href="./decor.html"
+  })
+
+
+//cart 
+
+
+cartcount()
+function cartcount(){
+    let totalcart=JSON.parse(localStorage.getItem("cartdata"))
+    document.getElementById("p-last").innerHTML=totalcart.length
+    console.log(totalcart.length)
+    
+}
+
+document.querySelector("#H-last-C").addEventListener("click", cart)
+
+function cart(){
+    window.location.href="./cartshow.html"
+    console.log("Aniket")
+}
+
+
+document.querySelector("#home").addEventListener("click", function(){
+    window.location.href="./index.html"
+  })
+
+    //search 
+    let search=[]
+document.getElementById("search-Icon").addEventListener("click",function(){
+let value=document.getElementById("searchbox").value.toLowerCase()
+search.push(value)
+localStorage.setItem("search",JSON.stringify(search))
+window.location.href="./search.html"
+
+
+})
+
+document.querySelector("#H-last-A").addEventListener("click", function(){
+    window.location.href="./account.html"
+  })
+
+  let username= JSON.parse(localStorage.getItem("username"))
+usern(username)
+function usern(u){
+  document.getElementById("H-username").innerHTML=u[u.length-1]
+
+}
+
+
+</script>

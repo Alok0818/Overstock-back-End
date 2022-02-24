@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Landing.css">
+    <link rel="stylesheet" href="./productpage3.css">
+</head>
+
+<body id="body">
+    <div id="navbar"></div>
+    <p id="p1">Furniture / Living Room Furniture</p>
+    <h1 id="h11">Sofa</h1>
+
+    <div id="sort">
+        <p>Sort By:</p> 
+        <select   name="" id="select">
+            <option value="">Best Selling</option>
+            <option value="low">Price Low-High</option>
+            <option value="high">Price High-Low</option>
+        </select>
+    </div>
+    
+    <div id="container">
+    
+        </div>
+
+        <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <div id="footer"></div>
+    
+</body>
+</html>
+<script type="module">
+    import { navigation, Footer } from "./Landing.js"
+
+let l=navigation()
+document.getElementById("navbar").innerHTML=l
+let f=Footer()
+document.getElementById("footer").innerHTML=f
+
+
+
+    let count=0
+   let itemdata=[]
+
+   let data=JSON.parse(localStorage.getItem("productdata"))
+    let cartdata=JSON.parse(localStorage.getItem("cartdata"))||[]
+    showproduct(data)
+    // short functinality 
+    document.getElementById("select").addEventListener("change",changeitem)
+    function changeitem(){
+        let value=document.querySelector("#select").value
+        if(value=="high"){
+        data.sort(function(a,b){
+            return b.price - a.price
+        })
+    }else if (value=="low"){
+        data.sort(function(a,b){
+            return a.price - b.price
+        })
+    }
+    
+    setTimeout(function(){
+        showproduct(data)
+    },1000)
+  
+        console.log(data)
+    }
+
+    function showproduct(data){
+        document.querySelector("#container").innerHTML=""
+data.map((ele)=>{
+
+
+        let a=document.createElement("a")
+       
+        a.addEventListener("click",function(){
+
+itemdata.push(ele)
+localStorage.setItem("itemdata",JSON.stringify(itemdata))
+console.log(itemdata)
+window.location.href="./product4.html"
+
+})
+
+        let image=document.createElement("img")
+        image.src=ele.image
+
+        let h2=document.createElement("h2")
+        h2.textContent=`Sale INR ${ele.price}`
+        let div=document.createElement("div")
+        let star1=document.createElement("img")
+star1.src="https://ak1.ostkcdn.com/img/mxc/20200227_rating-star-full.svg"
+
+        let star2=document.createElement("img")
+star2.src="https://ak1.ostkcdn.com/img/mxc/20200227_rating-star-full.svg"
+
+        let star3=document.createElement("img")
+star3.src="https://ak1.ostkcdn.com/img/mxc/20200227_rating-star-full.svg"
+        let star4=document.createElement("img")
+star4.src="https://ak1.ostkcdn.com/img/mxc/20200227_rating-star-full.svg"
+        let star5=document.createElement("img")
+        star5.src="https://ak1.ostkcdn.com/img/mxc/20200227_rating-star-empty.svg"
+        let div2=document.createElement("div")
+        let button=document.createElement("button")
+        button.id="cartbutton"
+        button.textContent="Add to cart"
+        button.addEventListener("click",function(){
+document.getElementById("cartbutton").style.backgroundColor="red"
+                addtocart(ele)
+        })
+
+div.append(star1,star2,star3,star4,star5)
+        let p=document.createElement("p")
+        p.textContent=ele.name
+        a.append(image,h2,div,p)
+        div2.append(a,button)
+        document.getElementById("container").append(div2)
+    })
+    }
+// cart
+    function addtocart(item){
+    
+     
+cartdata.push(item)
+
+localStorage.setItem("cartdata",JSON.stringify(cartdata))
+   cartcount()
+
+    }
+
+    document.querySelector("#H-last-A").addEventListener("click", function(){
+    window.location.href="./account.html"
+  })
+    
+cartcount()
+function cartcount(){
+    let totalcart=JSON.parse(localStorage.getItem("cartdata"))
+    document.getElementById("p-last").innerHTML=totalcart.length
+    console.log(totalcart.length)
+    
+}
+
+document.querySelector(".dropbtn").addEventListener("click", function(){
+    window.location.href="./furniture.html"
+  })
+  document.querySelector("#dropbtn2").addEventListener("click", function(){
+    window.location.href="./Rugs.html"
+  })
+  document.querySelector("#dropbtn3").addEventListener("click", function(){
+    window.location.href="./decor.html"
+  })
+
+document.querySelector("#H-last-C").addEventListener("click", cart)
+
+function cart(){
+    window.location.href="./cartshow.html"
+    console.log("Aniket")
+}
+
+
+
+document.querySelector("#home").addEventListener("click", function(){
+    window.location.href="./index.html"
+  })
+
+  //search 
+  let search=[]
+document.getElementById("search-Icon").addEventListener("click",function(){
+let value=document.getElementById("searchbox").value.toLowerCase()
+search.push(value)
+localStorage.setItem("search",JSON.stringify(search))
+window.location.href="./search.html"
+
+
+})
+
+let username= JSON.parse(localStorage.getItem("username"))
+usern(username)
+function usern(u){
+  document.getElementById("H-username").innerHTML=u[u.length-1]
+
+}
+
+</script>

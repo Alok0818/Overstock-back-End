@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cont{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+
+            height: 400px;
+            margin: auto;
+      
+            width: 40%;
+        }
+        input{
+            height: 50px;
+            text-align: center;
+            margin: auto;
+            width: 80%;
+        }
+        button{
+            height: 50px;
+            width: 100px;
+           margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+  
+    <div id="cont">
+<input id="name" type="text" placeholder="name">
+<input id="price" type="number" placeholder="price">
+<input id="image" type="text" placeholder="imagelink">
+<button onclick="data()" id="submit">submit</button>
+    </div>
+</body>
+</html>
+<script>
+//       //search 
+//       let search=[]
+//   document.getElementById("search-Icon").addEventListener("click",function(){
+//   let value=document.getElementById("searchbox").value.toLowerCase()
+//   search.push(value)
+//   localStorage.setItem("search",JSON.stringify(search))
+//   window.location.href="/search/search.html"
+  
+  
+//   })
+    var searchdata=JSON.parse(localStorage.getItem("searchdata"))||[]
+    function data(){
+
+let data={
+    name:document.getElementById("name").value,
+    price:document.getElementById("price").value,
+    image:document.getElementById("image").value
+};
+searchdata.push(data)
+localStorage.setItem("searchdata",JSON.stringify(searchdata))
+console.log(searchdata)
+    }
+</script>

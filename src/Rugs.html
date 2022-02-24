@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="./product1.css">
+<link rel="stylesheet" href="./Landing.css">
+<body>
+    <div id="navbar"></div>
+ <h1 id="h11">Rugs</h1>
+ <div id="main">
+     <div id="mainleft">
+         <h2 id="h21">Featured Categories</h2>
+        <a href=""><p> Area Rugs</p></a> 
+        <a href=""><p>Rug Pads</p></a> 
+        <a href=""><p>Shag Rugs</p></a> 
+        <a href=""><p>Kitchen Rugs & Mats</p></a> 
+        <a href=""><p>Doormats</p></a> 
+        <a href=""> <p>Stair Treads</p></a>
+        <a href=""> <p>One of a Kind Rugs</p></a>
+        <a href=""><p>Machine Made Rugs</p></a> 
+        <a href=""><p>Handmade Rugs</p></a> 
+        <a href=""><p>Kids & Tween Rugs</p></a> 
+        <a href=""><p>Bath Mats & Rugs</p></a> 
+        <a href=""> <h2 id="mh22">Shop All Rugs on Sale </h2></a>
+     </div>
+     <div id="maincenter"><img src="https://ak1.ostkcdn.com/img/mxc/01182022_Desktop_Rugs_Surya.jpg?imwidth=680&impolicy=medium?imwidth=750" alt="">
+    <div id="div1">
+        <div id="div2">
+            <span>extra</span>
+        <span>20% off</span>
+        <p>Select Rugs*</p>
+        <div>Show Now</div>
+        </div>
+    </div>
+    </div>
+
+     <div id="mainright">
+         <div id="mainright1">
+             <div id="div1">
+                <p>Shop all</p>
+                 <h2>Area Rugs</h2>
+             </div>
+             <div id="div2">
+                 <img src="https://ak1.ostkcdn.com/img/mxc/12202021_WINTER2022_RUGS_MM_01.png?imwidth=320&impolicy=medium?imwidth=384" alt="">
+             </div>
+         </div>
+         <div id="mainright2">
+             <div id="div1">
+                <img src="https://ak1.ostkcdn.com/img/mxc/12202021_WINTER2022_RUGS_MM_02.png?imwidth=320&impolicy=medium?imwidth=384" alt="">
+             </div>
+             <div id="div2">
+                 <p>Save On</p>
+                 <h2>Rugs Deal</h2>
+             </div>
+         </div>
+     </div>
+ </div>
+    <h2 id="h22">Shop Popular Rug Sizes</h2>
+
+    
+    <div id="container">
+        <a href="">
+                <img src="https://ak1.ostkcdn.com/img/mxc/03232020-gnp-rugs-PopCat_1.jpg?imwidth=400&impolicy=medium" alt="">
+                <p>3' x 5' Area Rugs</p>
+        </a>
+
+       <a href="">
+           <img src="https://ak1.ostkcdn.com/img/mxc/03232020-gnp-rugs-PopCat_2.jpg?imwidth=400&impolicy=medium" alt="">
+           <p>4' x 6' Area Rugs</p>
+       </a>
+
+       <a href="">
+        <img src="https://ak1.ostkcdn.com/img/mxc/03232020-gnp-rugs-PopCat_3.jpg?imwidth=400&impolicy=medium" alt="">
+        <p>5' X 8' Area Rugs</p>
+    </a>
+
+    <a href="">
+        <img src="https://ak1.ostkcdn.com/img/mxc/03232020-gnp-rugs-PopCat_4.jpg?imwidth=400&impolicy=medium" alt="">
+        <p>6' X 9' Area Rugs</p>
+    </a>
+    <a href="">
+        <img src="https://ak1.ostkcdn.com/img/mxc/03232020-gnp-rugs-PopCat_5.jpg?imwidth=400&impolicy=medium" alt="">
+        <p>7' X 9' Area Rugs</p>
+    </a>
+
+    <a href="">
+        <img src="https://ak1.ostkcdn.com/img/mxc/03232020-gnp-rugs-PopCat_6.jpg?imwidth=400&impolicy=medium" alt="">
+        <p>8' X 10' Area Rugs</p>
+    </a>
+
+    <a href="">
+        <img src="https://ak1.ostkcdn.com/img/mxc/03232020-gnp-rugs-PopCat_7.jpg?imwidth=400&impolicy=medium" alt="">
+        <p>9' X 12' Area Rugs</p>
+    </a>
+
+    <a href="">
+        <img src="https://ak1.ostkcdn.com/img/mxc/03232020-gnp-rugs-PopCat_8.jpg?imwidth=400&impolicy=medium" alt="">
+        <p>10' x 14' Area Rugs</p>
+    </a>
+
+    
+    </div>
+
+    <div id="container2">
+       <div id="div1">
+           <a href=""><img src="https://ak1.ostkcdn.com/img/mxc/12202021_WINTER2022_RUGS_688x444_BG01.jpg?imwidth=1024&impolicy=medium" alt=""></a>
+       </div>
+        <div id="div2">
+            
+            <h2>Stylist Picks: Top 8 Shag Rugs</h2>
+            <p>Find the perfect rug for your space with these top picks from Overstock's talented stylist Melanie McLaws, who hand-picked these gorgeous shag rugs from Overstock's amazing rug assortment.</p>
+            <button>Read More</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <div id="footer"></div>
+</body>
+</html>
+<script type="module">
+    import { navigation, Footer } from "./Landing.js"
+
+let l=navigation()
+document.getElementById("navbar").innerHTML=l
+let f=Footer()
+document.getElementById("footer").innerHTML=f
+
+document.querySelector(".dropbtn").addEventListener("click", function(){
+    window.location.href="./furniture.html"
+  })
+  document.querySelector("#dropbtn2").addEventListener("click", function(){
+    window.location.href="./Rugs.html"
+  })
+  document.querySelector("#dropbtn3").addEventListener("click", function(){
+    window.location.href="./decor.html"
+  })
+
+
+document.querySelector("#H-last-C").addEventListener("click", cart)
+
+function cart(){
+    window.location.href="./cartshow.html"
+    console.log("Aniket")
+}
+
+cartcount()
+function cartcount(){
+    let totalcart=JSON.parse(localStorage.getItem("cartdata"))
+    document.getElementById("p-last").innerHTML=totalcart.length
+    console.log(totalcart.length)
+    
+}
+
+document.querySelector("#home").addEventListener("click", function(){
+    window.location.href="./index.html"
+  })
+
+    //search 
+    let search=[]
+document.getElementById("search-Icon").addEventListener("click",function(){
+let value=document.getElementById("searchbox").value.toLowerCase()
+search.push(value)
+localStorage.setItem("search",JSON.stringify(search))
+window.location.href="./search.html"
+
+
+})
+document.querySelector("#H-last-A").addEventListener("click", function(){
+    window.location.href="./account.html"
+  })
+
+  let username= JSON.parse(localStorage.getItem("username"))
+usern(username)
+function usern(u){
+  document.getElementById("H-username").innerHTML=u[u.length-1]
+
+}
+
+
+</script>

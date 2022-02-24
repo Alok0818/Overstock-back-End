@@ -1,0 +1,268 @@
+#h11{
+    font-size:36px;
+ font-family:Helvetica, Helvetica, Arial, sans-serif;
+ color:rgb(47, 51, 55);
+ margin-left: 1%;
+   
+}
+#main{
+    width: 98%;
+    height: 680px;
+    display: flex;
+    margin: auto;
+    gap: 1%;
+}
+#mainleft{
+ 
+  height: 100%;
+   width: 23%;
+    
+  
+}
+#maincenter{
+   position: relative;
+    width: 51%;
+    height: 100%;
+}
+
+#mainright{
+   
+   width: 23%;
+    height: 100%;
+  
+}
+#m-img1,#m-img2{
+  width: 100%;
+  height: 100%;
+}
+#maincenter >img{
+  width: 100%;
+  height: 100%;
+}
+#mainright1{
+    
+    width: 100%;
+    margin-top: -25px;
+    padding-left: 2%;
+    margin-bottom: 4%;
+  background-color: rgb(234,234,234);
+    height: 48%;
+
+}
+#mainright2{
+    border: 1px ;
+    width: 100%;
+    padding-left: 2%;
+    height: 50%;
+     background-color: rgb(234,234,234);
+
+}
+
+#mainright2{
+
+  background-color: rgb(234,234,234);
+}
+#mainleft>#h21{
+font-family:Helvetica, Helvetica, Arial, sans-serif;
+color:rgb(47, 51, 55);
+padding-bottom: 20px;
+font-size: 23px;
+}
+
+#mainleft >a{
+font-family:Helvetica, Helvetica, Arial, sans-serif;
+line-height: 22px;
+color:rgb(47, 51, 55);
+text-decoration: none;
+
+}
+#mainleft >a>#mh22{
+font-family:Helvetica, Helvetica, Arial, sans-serif;
+color:red;
+font-size: larger;
+font-size: 18px;
+padding-left: 5%;
+
+}
+#mainleft >a >p{
+  padding-left: 5%;}
+
+  #maincenter >#div1{
+height: 28%;
+background-color: rgb(70,126,144);
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+width: 32%;
+text-align: center;
+cursor: pointer;
+margin: 0%;
+
+position: absolute;
+top: 0px;
+  }
+  #maincenter >#div1>#div2>span{
+      font-size: 28px;
+      line-height: 36px;
+      
+    
+      color: white;
+      font-weight: 600;
+
+  }
+  #maincenter >#div1>#div2{
+     
+    text-align: center;
+    padding-top: 10px;
+    margin: auto;
+width: 80%;
+  }
+  #maincenter>#div1>#div2 >div{
+      margin: auto;
+      background-color: transparent;
+      padding-top: 7px;
+      border: 1px solid white;
+      color: white;
+      width: 100px;
+      height: 25px;
+      border-radius: 3px;
+      font-size: 15px;
+  }
+  #maincenter> #div1>#div2 >p{
+      color: white;
+    
+  }
+
+  #mainright1 >#div1, #mainright1>#div2{
+      
+   
+    color:rgb(47, 51, 55);
+    
+    font-family:Helvetica, Helvetica, Arial, sans-serif;
+
+line-height: 10px;
+
+    
+    text-align: center;
+    font-size: 18px;
+      width: 100%;
+      height: 40;
+
+  }
+
+   #mainright2 >#div1,  #mainright2 >#div2{
+      
+   
+      color:rgb(47, 51, 55);
+      
+      font-family:Helvetica, Helvetica, Arial, sans-serif;
+  
+  line-height: 10px;
+  
+      
+      text-align: center;
+      font-size: 18px;
+        width: 100%;
+        height: 40;
+
+    }
+  
+ 
+  #mainright1>#div2>img{
+   
+      width: 90%;
+     
+      height: 80%;
+
+  }
+  #mainright1 >#div1 >p{
+  font-weight: 500;
+  padding-top: 40px;
+  font-size: 25px;
+  }
+  #mainright2 >#div1{
+     padding-top: 15%;
+  }
+  #mainright2>#div2 >p{
+  font-weight: 500;
+  
+  font-size: 25px;
+  }
+
+#h22{
+    text-align: center;
+    margin: 4%;
+    margin-bottom: 2%;
+    font-size:25px;
+ font-family:Helvetica, Helvetica, Arial, sans-serif;
+ color:rgb(47, 51, 55);
+}
+
+  #container{
+      display: grid;
+      width: 98%;
+      margin: auto;
+      grid-template-columns: repeat(4,1fr);
+      grid-gap:15px
+      
+  }
+  #container >div{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      height: 350px;
+      border: 1px solid red;
+  }
+  #container >a>img{
+height: 85%;
+width: 100%;
+  }
+  #container >a>p{
+text-align: center;
+
+font-size: 19px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color:rgb(47, 51, 55);
+margin: 2%;
+font-weight: 400;
+  }
+a{
+    text-decoration: none;
+   
+}
+ #container2{
+     display: flex;
+     margin-top: 4%;
+     width: 98%;
+    
+     height: 400px;
+ }
+ #container2 >#div1, #container2 >#div2{
+width: 50%;
+font-family:Helvetica, Helvetica, Arial, sans-serif;
+height: 100%;
+ }
+ 
+ #container2 >#div2{
+     padding-left: 1.5%;
+ }
+ #container2 >#div1>a>img{
+  width: 100%;
+  height: 100%;
+}
+ #container2>#div2>h2{
+ font-size: 23px;
+ color:
+rgb(47, 51, 55)
+ }
+ #container2>#div2>p{
+ font-size: 14px;
+ line-height: 21px;
+ color:rgb(84, 86, 88)
+ }
+ #container2 >#div2>button{
+     width: 120px;
+     margin-top: 10px;
+     height: 45px;
+     border-radius: 3px;
+     font-size: 15px;
+     color: rgb(69, 71, 73) ;
+     border: 0.5px solid rgb(75, 77, 78);
+     background-color: transparent;
+ }
